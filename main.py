@@ -1,6 +1,13 @@
 import tkinter as tk
 from tkinter import filedialog
 import math
+import ctypes
+
+try:
+    ctypes.windll.shcore.SetProcessDpiAwareness(1)
+except Exception:
+    pass
+
 
 class LineClippingApp:
     def __init__(self, root):
